@@ -322,12 +322,16 @@ def draw_circles(window, points, radius, color):
       :type color: str
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
-    window = rg.RoseWindow()
     for  k in range(len(points)):
-        
+        center_point = points[k]
+        circle = rg.Circle(center_point, radius)
+        circle.fill_color = color
+        circle.attach_to(window)
+    window.render()
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
