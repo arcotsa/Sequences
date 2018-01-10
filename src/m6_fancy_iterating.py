@@ -13,8 +13,8 @@ is different from:
   -- LOOKING only at items AT even-numbered indices.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Satya Arcot.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -47,9 +47,9 @@ def main():
     #     4. When satisfied with your work, move onto the next test.
     # ------------------------------------------------------------------
 
-    run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4)
+#     run_test_print_all_items_forwards(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_all_items_backwards(sequence1, sequence2, sequence3, sequence4)
-#     run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
+    run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_items_in_second_half(sequence1, sequence2, sequence3, sequence4)
 #     run_test_print_items_that_are_bigger_than_5()  # Uses different sequences
 #     run_test_print_items_that_are_strings(sequence1, sequence2, sequence3, sequence4)
@@ -354,9 +354,11 @@ def print_all_items_forwards(sequence):
        Point at (90, 25)
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+    for k in range(0, len(sequence)):
+        print(sequence[k])
 
 
 # ----------------------------------------------------------------------
@@ -376,10 +378,11 @@ def print_all_items_backwards(sequence):
        55
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
-
+    for k in range(len(sequence)-1, -1, -1):
+        print(sequence[k])
 
 # ----------------------------------------------------------------------
 # Iterating through PART of a sequence:
@@ -455,6 +458,9 @@ def print_items_that_are_bigger_than_5(sequence):
     # TODO: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+    for k in range(len(sequence)):
+        if sequence[k] > 5:
+            print(k)
 
 
 # ----------------------------------------------------------------------
